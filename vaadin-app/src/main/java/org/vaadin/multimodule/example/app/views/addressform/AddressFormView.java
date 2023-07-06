@@ -59,7 +59,6 @@ public class AddressFormView extends Div {
         FormLayout formLayout = new FormLayout();
         formLayout.add(street, 2);
         postalCode.setPattern("\\d*");
-        postalCode.setPreventInvalidInput(true);
         country.setItems("Country 1", "Country 2", "Country 3");
         state.setItems("State A", "State B", "State C", "State D");
         formLayout.add(postalCode, city, state, country);

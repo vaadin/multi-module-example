@@ -1,6 +1,6 @@
 package org.vaadin.multimodule.example.backend.entity;
 
-import javax.persistence.Entity;
+import jakarta.persistence.Entity;
 
 @Entity
 public class SampleAddress extends AbstractEntity {
