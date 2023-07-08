@@ -33,6 +33,13 @@
                 <enabled>false</enabled>
             </snapshots>
         </repository>
+        <!-- Repository for Vaadin pre-releases-->
+        <repository>
+            <id>vaadin-prereleases</id>
+            <url>
+                https://maven.vaadin.com/vaadin-prereleases/
+            </url>
+        </repository>
         <!-- Repository used by many Vaadin add-ons -->
         <repository>
             <id>Vaadin Directory</id>
