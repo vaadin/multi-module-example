@@ -8,6 +8,10 @@
     <name>Vaadin Multi-Module Example</name>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
+    <properties>
+        <java.version>17</java.version>
+        <vaadin.version>24.3.13</vaadin.version>
+    </properties>
 
     <modules>
         <module>backend</module>
