@@ -1,5 +1,7 @@
 package org.vaadin.multimodule.example.app.views;
 
+import com.vaadin.flow.server.auth.AnonymousAllowed;
+
 
 import org.vaadin.multimodule.example.app.views.helloworld.HelloWorldView;
 import com.vaadin.flow.component.Component;
@@ -25,7 +27,8 @@ import org.vaadin.multimodule.example.app.views.personform.PersonFormView;
 /**
  * The main view is a top-level placeholder for other views.
  */
-public class MainLayout extends AppLayout {
+@AnonymousAllowed
+public class MainLayout extends AppLayout implements com.vaadin.flow.router.AfterNavigationObserver {
 
     /**
      * A simple navigation item component, based on ListItem element.
@@ -138,9 +141,11 @@ public class MainLayout extends AppLayout {
     }
 
     @Override
-    protected void afterNavigation() {
-        super.afterNavigation();
-        viewTitle.setText(getCurrentPageTitle());
+    
+
+    public void afterNavigation(com.vaadin.flow.router.AfterNavigationEvent event) {
+
+    viewTitle.setText(getCurrentPageTitle());
     }
 
     private String getCurrentPageTitle() {
